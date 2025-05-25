@@ -1,0 +1,165 @@
+:root {
+  --color-secondary: #9d9d9d;
+  --color-tertiary: #c9c9c9;
+  --color-easy-text: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+h1,
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #181818;
+  color: #ffffff;
+  font-family: Hanken Grotesk, sans-serif;
+  width: 100vw;
+  padding: 120px 0;
+
+  .badge {
+    border: 1px solid #414141;
+    background: #181818;
+    color: #d7d7d7;
+    padding: 8px 28px;
+    border-radius: 30px;
+    width: fit-content;
+
+    &.hard {
+      color: #ffaeae;
+      border: 1px solid #ff9797;
+      background: #522727;
+    }
+
+    &.medium {
+      color: #f9cdad;
+      border: 1px solid #ffce97;
+      background: #4a422f;
+    }
+
+    &.easy {
+      color: #4eedff;
+      border: 1px solid #97e3ff;
+      background: #223851;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: #ffffff;
+
+      .logo {
+        height: 60px;
+      }
+
+      h1 {
+        font-size: 48px;
+        line-height: 0.8;
+      }
+    }
+  }
+
+  .flashCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    row-gap: 60px;
+    column-gap: 80px;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .flashCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #252525;
+      border-radius: 8px;
+      width: 100%;
+      height: 220px;
+      padding: 40px;
+      gap: 12px;
+      box-shadow: 0px 4px 54.8px 0px #1e1e1e;
+      border: 1px solid #414141;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .questionLabel {
+        font-size: 12px;
+        color: var(--color-tertiary);
+      }
+
+      .flashCardAnswerHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &.hard,
+      &.medium,
+      &.easy {
+        text-align: left;
+        padding: 28px;
+        align-items: flex-start;
+        
+        .badge {
+          font-size: 12px;
+        }
+      }
+
+      .badge {
+        padding: 4px 24px
+      }
+
+      &.hard {
+        border-color: #ffaeae;
+      }
+
+      &.medium {
+        border-color: #f9cdad;
+      }
+
+      &.easy {
+        border-color: #4eedff;
+      }
+    }
+  }
+}
