@@ -1,4 +1,4 @@
-const FlashCard = ({ question, answer, difficulty, isRevealed, onClick }) => {
+const FlashCard = ({ questionNumber, question, answer, difficulty, isRevealed, onClick }) => {
   return (
     <div
       className={`flashCard ${isRevealed ? difficulty.toLowerCase() : ""}`}
@@ -15,7 +15,7 @@ const FlashCard = ({ question, answer, difficulty, isRevealed, onClick }) => {
         </>
       ) : (
         <>
-          <p className="questionLabel">Question 1</p>
+          <p className="questionLabel">Question {questionNumber}</p>
           <h2 className="question">{question}</h2>
           <p className={`badge ${difficulty.toLowerCase()}`}>{difficulty}</p>
         </>
